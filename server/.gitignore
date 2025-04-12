@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+*.env
+
+# PyCharm project files
+.idea/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Test output
+htmlcov/
+.tox/
+.nox/
+.coverage
+.cache
+.pytest_cache/
+
+# Logs and local settings
+*.log
+*.sqlite3
+*.db
+
+# MacOS files
+.DS_Store
+
+# VSCode (if used alongside)
+.vscode/
