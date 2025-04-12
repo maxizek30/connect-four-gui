@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./App.css";
 
 const ROWS = 6;
@@ -16,21 +16,19 @@ function App() {
   const [winner, setWinner] = useState(null);
   const [aiType, setAiType] = useState("local"); // "local", "deepseek", "claude", or "chatgpt"
   const [error, setError] = useState(null);
-  const [videoSource, setVideoSource] = useState("server.mp4"); // Video source state
 
   const humanSound = new Audio("quak.mp3");
   const aiSound = new Audio("bark.mp3");
   const humanWinSound = new Audio("cry.mp3");
   const aiWinSound = new Audio("yay.mp3");
 
-  // Map each AI type to a corresponding image
   const aiImages = {
     local:
-      "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png", // Replace with your local AI image URL
-    deepseek: "Subject.png", // Replace with your DeepSeek AI image URL
+      "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png",
+    deepseek: "Subject.png",
     claude:
       "https://gallerypngs.com/wp-content/uploads/2024/12/Chill-Guy-Png-Photo-Free-Download.png", // Replace with your Claude AI image URL
-    chatgpt: "https://i.redd.it/l9cby426oap71.png", // Replace with your ChatGPT image URL
+    chatgpt: "https://i.redd.it/l9cby426oap71.png",
   };
 
   // Determine valid columns where a piece can be dropped
@@ -250,33 +248,7 @@ function App() {
         <button onClick={() => backgroundAudio.play()} className="play-button">
           Play Background Music
         </button>
-        <div className="video-toggle">
-          <label>
-            <input
-              type="radio"
-              name="videoType"
-              value="server.mp4"
-              checked={videoSource === "server.mp4"}
-              onChange={() => setVideoSource("server.mp4")}
-            />
-            Video 1
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="videoType"
-              value="surfers.mp4"
-              checked={videoSource === "surfers.mp4"}
-              onChange={() => setVideoSource("surfers.mp4")}
-            />
-            Video 2
-          </label>
-        </div>
       </div>
-      <video className="video-background" autoPlay loop muted>
-        <source src={videoSource} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
       <h1>Connect 4</h1>
       {winner ? (
         <h2>{winner} Wins!</h2>
