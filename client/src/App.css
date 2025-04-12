@@ -1,0 +1,141 @@
+.connect4-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.386);
+  border-radius: 20px;
+}
+
+.boardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-rows: repeat(6, 50px);
+  gap: 10px;
+  justify-content: center;
+  background-color: #33569c;
+  padding: 20px;
+  width: auto;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(7, 50px);
+  gap: 10px;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cell:hover {
+  background-color: lightgray;
+}
+
+.reset-button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  background-color: #0056b3;
+}
+
+.ai-toggle {
+  margin-top: 15px;
+}
+
+.ai-toggle label {
+  margin: 0 10px;
+  font-size: 25px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+/* AI Image container and styling */
+.ai-image-container {
+  margin-top: 20px;
+}
+
+.ai-image {
+  width: 200px; /* Adjust the size of the image as needed */
+  height: auto;
+  object-fit: contain;
+}
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensure it's behind other content */
+}
+h1 {
+  font-size: 4rem;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+.top-left-controls {
+  color: white;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 100; /* Ensure it is above other elements */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.play-button {
+  background-color: #4caf50; /* Green background */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.play-button:hover {
+  background-color: #45a049; /* Darker green */
+}
+
+.video-toggle label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.video-toggle input {
+  margin-right: 5px;
+}
+p {
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 4px #000000;
+}
